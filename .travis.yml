@@ -5,6 +5,6 @@ services:
 before_install:
   - ./bin/config-ecs-cli.sh
 script:
-  - docker-compose run web python manage.py test
+  - ./bin/test-proj.sh
 after_success:
   - ./bin/docker-push.sh

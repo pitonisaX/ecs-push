@@ -1,7 +1,11 @@
 #!/bin/bash
+# Setup your envrironment
+source ./bin/env.sh
+
+#Stand up your cluster
 ecs-cli up \
-  --keypair dan-ecs-west \
+  --keypair "$AWS_KEY_PAIR"\
   --capability-iam \
-  --size 1 \
-  --instance-type t2.large  \
-  --port 8000 \
+  --size "$ECS_CLUSTER_SIZE" \
+  --instance-type "$ECS_INSTANCE_TYPE"  \
+  --port "$ECS_PORT" \

@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     build: .
-    image: pdxdiver/django-web
+    image: "${DOCKER_REPO}/${DOCKER_WEB_IMAGE}"
     command: /code/docker-entrypoint.sh
     volumes:
       - .:/code
