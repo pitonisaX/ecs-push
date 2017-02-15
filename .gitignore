@@ -1,5 +1,7 @@
 *.pem
-__pycache__/
+*/*/__pycache__/*
+*/__pycache__/*
+__pycache__/*
 .DS_Store
 secrets.sh
 blah.blah.blah.blah
